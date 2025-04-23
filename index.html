@@ -1,0 +1,170 @@
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Link Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px; /* Space for fixed header */
+            padding: 20px;
+        }
+
+        /* Tile Grid */
+        .tile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Tile Styles */
+        .tile {
+            position: relative;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+            z-index: 1;
+        }
+
+        .tile span {
+            color: white;
+            font-size: 21px; /* Increased from 18px (~2pt increase) */
+            font-weight: bold;
+            text-align: center;
+            z-index: 2;
+            position: absolute; /* Position at bottom */
+            bottom: 10px; /* 10px from bottom */
+            width: 100%; /* Full width for centering */
+            padding: 5px; /* Adjusted padding */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bible Bots - and a few other things</h1>
+    </header>
+    <main>
+        <div class="tile-grid">
+            <!-- Tile 1 -->
+            <a href="https://chatgpt.com/g/g-67fe4f205bc8819180cd8feb8a90d194-the-wisdom-of-solomon" class="tile" style="background-image: url('TilesBiblebot/Solomon.jpeg')">
+                <span>The wisdom of Solomon</span>
+            </a>
+            <!-- Tile 2 -->
+            <a href="https://chatgpt.com/g/g-67fe610ae3188191ac45a13b84667bf9-precious-prisca" class="tile" style="background-image: url('TilesBiblebot/Prisca.jpeg')">
+                <span>Precious Prisca</span>
+            </a>
+            <!-- Tile 3 -->
+            <a href="https://chatgpt.com/g/g-68078c8de2b48191a6b295e565092c25-big-papa-adam" class="tile" style="background-image: url('TilesBiblebot/Adam.jpeg')">
+                <span>Big Papa Adam</span>
+            </a>
+            <!-- Tile 4 -->
+            <a href="https://biblword.learnnn.com/biblebasics" class="tile" style="background-image: url('TilesBiblebot/Biblebasics.jpeg')">
+                <span>Bible course Bible Basics</span>
+            </a>
+            <!-- Tile 5 -->
+            <a href="https://chatgpt.com/g/g-6807bb397b988191ad8e2b762006301a-john-apostle-of-love" class="tile" style="background-image: url('TilesBiblebot/John.jpeg')">
+                <span>John, apostle of love</span>
+            </a>
+            <!-- Tile 6 -->
+            <a href="https://chatgpt.com/g/g-6807a82272d881918b42e184c03f6653-esther-s-emeralds" class="tile" style="background-image: url('TilesBiblebot/Esther.jpeg')">
+                <span>Esther's Emeralds</span>
+            </a>
+            <!-- Tile 7 -->
+            <a href="https://chatgpt.com/g/g-6807960846688191b45c7ed01e3071fb-david-god-s-musician" class="tile" style="background-image: url('TilesBiblebot/David.jpeg')">
+                <span>David, God's Musician</span>
+            </a>
+            <!-- Tile 8 -->
+            <a href="https://m.me/Biblword" class="tile" style="background-image: url('TilesBiblebot/Biblword.jpeg')">
+                <span>Chat with a human</span>
+            </a>
+            <!-- Tile 9 -->
+            <a href="https://chatgpt.com/g/g-6807e1b9b8208191aae0fee9fde0bd2e-caiaphas-the-high-priest" class="tile" style="background-image: url('TilesBiblebot/Caiaphas.jpeg')">
+                <span>Caiaphas the high priest</span>
+            </a>
+            <!-- Tile 10 -->
+            <a href="https://chatgpt.com/g/g-6807e62b1f5c81919d4376ab7fb81685-mother-mary" class="tile" style="background-image: url('TilesBiblebot/Mary.jpeg')">
+                <span>Mother Mary</span>
+            </a>
+            <!-- Tile 11 -->
+            <a href="https://www.biblword.net/daily-devotional/" class="tile" style="background-image: url('TilesBiblebot/Dailydevotional.png')">
+                <span>Subscribe!</span>
+            </a>
+            <!-- Tile 12 -->
+            <a href="https://chatgpt.com/g/g-68089e625910819196ee61f29b89a874-noah-preacher-of-righteousness" class="tile" style="background-image: url('TilesBiblebot/Noah.png')">
+                <span>Noah, preacher of righteousness</span>
+            </a>
+            <!-- Tile 13 -->
+             <a href="https://biblword.learnnn.com/jesus-film" class="tile" style="background-image: url('TilesBiblebot/Jesus.jpg')">
+                <span>Bible course The Life of Jesus</span>
+            </a>
+            <!-- Tile 14 -->
+            <a href="https://chatgpt.com/g/g-6807d751c1d88191b3346e38f033310d-the-psalm-14-man" class="tile" style="background-image: url('TilesBiblebot/Psalm14.jpeg')">
+                <span>The Psalm 14 man</span>
+            </a>
+            <!-- Tile 15 -->
+            <a href="https://chatgpt.com/g/g-6808deecc50c81919b299998210270da-paul-prisoner-of-christ" class="tile" style="background-image: url('TilesBiblebot/Paul.png')">
+                <span>Paul, prisoner of Christ</span>
+            </a>
+            <!-- Tile 16 -->
+            <a href="https://www.biblword.net/how-are-sinners-saved/" class="tile" style="background-image: url('TilesBiblebot/Biblword.jpeg')">
+                <span>How do I get saved?</span>
+            </a>
+            <!-- Tile 17 -->
+            <a href="https://www.bible.com/en/search/plans?q=globalrize" class="tile" style="background-image: url('TilesBiblebot/Youversion.jpeg')">
+                <span>Read your Bible!</span>
+            </a>
+          </div>
+    </main>
+</body>
+</html>
+
