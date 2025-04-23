@@ -1,2 +1,2 @@
 # Biblebotspage
-Second try
+Bible Bots and a few other things
